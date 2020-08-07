@@ -79,33 +79,7 @@ We will try to implement a SUPERVISED CLASSIFICATION learning model by using fee
 
 **Code:**
 
-#importing the libraries
-
-from keras.preprocessing.image import ImageDataGeneratorfrom keras.models import Model, Sequential #creating the architecture for the CNNfrom keras.layers import Dense, Conv2D, Flatten #creating layers for the modelimport numpy as npimport os #to access the data stored in the computerfrom PIL import Image, ImageFile
-
-ImageFile.LOAD\_TRUNCATED\_IMAGES = True
-
-#loading the dataset from Google Drivefrom google.colab import drive
-
-drive .mount(&#39;/content/drive&#39;)
-
-#Designing compiling the CNN modelmodel=Sequential()
-
-model.add(Conv2D(32, kernel\_size=3, activation=&#39;relu&#39;, input\_shape=(300,300,3))) #input layermodel.add(Conv2D(32, kernel\_size=3, activation=&#39;relu&#39;)) #this is a convolution layermodel.add(Conv2D(64, kernel\_size=3, activation=&#39;relu&#39;)) #this is another convolution layermodel.add(Conv2D(64, kernel\_size=3, activation=&#39;relu&#39;)) #this is another convolution layermodel.add(Flatten()) #converts into 1-D array i.e. flattensmodel.add(Dense(1,activation=&#39;sigmoid&#39;)) #1 neurons. 2 diferent labels (Fake or Live)
-
-model.compile(loss=&#39;binary\_crossentropy&#39;,optimizer=&#39;adam&#39;,metrics=[&#39;accuracy&#39;]) #compiling the model
-
-#loading and classifying data into train and test setstrain\_datagen=ImageDataGenerator(rescale=-
-
-1./255,shear\_range=0.1,zoom\_range=0.2,horizontal\_flip=False)test\_datagen=ImageDataGenerator(rescale=1./255)
-
-train\_set=train\_datagen.flow\_from\_directory(&quot;/content/drive/My Drive/Deep Learning
-
-IITI/Fingerprint/train&quot;,target\_size=(300,300),batch\_size=16,class\_mode=&#39;binary&#39;)test\_set=test\_datagen.flow\_from\_directory(&quot;/content/drive/My Drive/Deep Learning IITI/Fingerprint/test&quot;,target\_size=(300,300),batch\_size=16,class\_mode=&#39;binary&#39;)
-
-#Fitting the model
-
-model.fit\_generator(train\_set,steps\_per\_epoch=25,epochs=3,validation\_data=test\_set,validation\_steps=2)model.save\_weights(&#39;hi.h5&#39;) # to save weights after training
+![](images/81.jpg)
 
 **Output:**
 
@@ -119,53 +93,8 @@ After this, we applied the CNN model to a bigger dataset consisting of 13,618 sa
 
 **Code:**
 
-#importing the librariesimport keras,osfrom keras.models import Sequential,Model
-
-from keras.layers import Dense, Conv2D, MaxPool2D,Flattenfrom keras.preprocessing.image import ImageDataGeneratorimport numpy as np
-
-from PIL import Image, ImageFile
-
-ImageFile.LOAD\_TRUNCATED\_IMAGES = True
-
-#loading the dataset from Google Drivefrom google.colab import drive
-
-drive .mount(&#39;/content/drive&#39;)
-
-#loading and classifying data into train and test setstrain\_datagen=ImageDataGenerator(rescale=-
-
-1./255,shear\_range=0.1,zoom\_range=0.2,horizontal\_flip=False)test\_datagen=ImageDataGenerator(rescale=1./255)train\_set=train\_datagen.flow\_from\_directory(&quot;/content/drive/My
-
-Drive/MODEL1/Train&quot;,target\_size=(300,300),batch\_size=16,class\_mode=&#39;binary&#39;)test\_set=test\_datagen.flow\_from\_directory(&quot;/content/drive/My
-
-Drive/MODEL1/Test&quot;,target\_size=(300,300),batch\_size=16,class\_mode=&#39;binary&#39;)
-
-#Designing compiling the CNN modelmodel=Sequential()model.add(Conv2D(input\_shape=
-
-(300,300,3),filters=64,kernel\_size=(3,3),padding=&#39;same&#39;,activation=&#39;relu&#39;))model.add(Conv2D(filters=64,kernel\_size=(3,3),padding=&#39;same&#39;,activation=&#39;relu&#39;))model.add(MaxPool2D(pool\_size=(2,2)))
-
-model.add(Conv2D(filters=128,kernel\_size=(3,3),padding=&#39;same&#39;,activation=&#39;relu&#39;))model.add(Conv2D(filters=128,kernel\_size=(3,3),padding=&#39;same&#39;,activation=&#39;relu&#39;))model.add(MaxPool2D(pool\_size=(2,2)))
-
-model.add(Conv2D(filters=256,kernel\_size=(3,3),padding=&#39;same&#39;,activation=&#39;relu&#39;))model.add(Conv2D(filters=256,kernel\_size=(3,3),padding=&#39;same&#39;,activation=&#39;relu&#39;))model.add(Conv2D(filters=256,kernel\_size=(3,3),padding=&#39;same&#39;,activation=&#39;relu&#39;))model.add(MaxPool2D(pool\_size=(2,2)))
-
-model.add(Conv2D(filters=512,kernel\_size=(3,3),padding=&#39;same&#39;,activation=&#39;relu&#39;))model.add(Conv2D(filters=512,kernel\_size=(3,3),padding=&#39;same&#39;,activation=&#39;relu&#39;))model.add(Conv2D(filters=512,kernel\_size=(3,3),padding=&#39;same&#39;,activation=&#39;relu&#39;))model.add(MaxPool2D(pool\_size=(2,2)))
-
-model.add(Flatten())
-
-model.add(Dense(4096,activation=&#39;relu&#39;))model.add(Dense(4096,activation=&#39;relu&#39;))
-
-model.add(Dense(1,activation=&#39;sigmoid&#39;))
-
-model.compile(loss=&#39;binary\_crossentropy&#39;,optimizer=&#39;adam&#39;,metrics=[&#39;accuracy&#39;])
-
-model.summary()
-
-from keras.callbacks import ModelCheckpoint,EarlyStopping
-
-checkpoint=ModelCheckpoint(&quot;vgg16\_1.h5&quot;,monitor=&#39;val\_acc&#39;,verbose=1,save\_best\_only=True)early=EarlyStopping(monitor=&#39;val\_acc&#39;,patience=20,verbose=1)
-
-#fitting the model
-
-model.fit\_generator(generator=train\_set,validation\_data=test\_set,steps\_per\_epoch=100,epochs=100,validati on\_steps=10,callbacks=[checkpoint,early])
+![](images/91.jpg)
+![](images/101.jpg)
 
 **Output:**
 
