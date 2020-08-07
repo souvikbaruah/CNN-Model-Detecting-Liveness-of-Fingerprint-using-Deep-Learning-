@@ -109,11 +109,11 @@ model.fit\_generator(train\_set,steps\_per\_epoch=25,epochs=3,validation\_data=t
 
 **Output:**
 
-![](RackMultipart20200807-4-1ccueq1_html_42410d7c058c8acb.jpg)
+![](images/6.jpg)
 
 After this, we applied the CNN model to a bigger dataset consisting of 13,618 samples (.png format fingerprint images). The accuracy decreased as compared to the previous model. The output obtained is as shown below:
 
-![](RackMultipart20200807-4-1ccueq1_html_c97836779198ed9.jpg)
+![](images/7.jpg)
 
 **2.2.2) VGG16 Model:** The VGG16 model is also known as the OxfordNet model. It is a convolutional neural network (CNN) architecture designed by the Visual Geometry Group from Oxford and hence, the name. The team used this model to win the ILSVR (ImageNet) competition in 2014. Till today this model is considered as one of the best vision models. However, some recent advances, such as the Inception model and the ResNet model, have outperformed the VGG16 model.
 
