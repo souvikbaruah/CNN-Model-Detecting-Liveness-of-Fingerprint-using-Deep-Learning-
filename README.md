@@ -17,7 +17,7 @@ Fingerprints are used as identifiers because their patterns remain fixed over ti
 
 A fingerprint is acquired by a live-scan device which captures a digital image of the fingerprint. Most devices sample the image at 500 DPI (Dots per Inch) and produce an 8-bit gray-scale raw image. Some such devices also include mechanisms to distinguish between a fake and a live fingerprint to reveal spoofing attacks by fake fingerprints. The acquired raw image is then passed to a quality control module which checks whether the sample is good enough to be processed or not. If the quality is low then the system rejects the sample, otherwise it is passed to an image enhancement module whose main goal is to improve the clarity of the ridge pattern, especially in the noisy region and to simplify the subsequent feature extraction. The feature extraction module draws out a set of data (features) from the enhanced image. This feature set often includes minutiae points but, depending on the matching algorithm, other features (e.g., local orientation, local frequency, singularities, ridge shapes, ridge counts, parts of the improved image, etc.) may be extracted in conjunction with small details. Finally, the fingerprint matching module retrieves from a system database one or more templates and matches it with the features extracted from the current sample. If the system is operating in the verification mode where the user is required to claim his/her identity, only one template is retrieved from the database and matched with the current sample. On the other hand, if the system is operating in the identification mode where the identity of an individual is to be determined, the current sample is matched against all the database templates to check if one of them is sufficiently similar.
 
-![](RackMultipart20200807-4-1ccueq1_html_c5c7496f41eee206.jpg)
+![](images/1.jpg)
 
 _Fig. 1.1 The block diagram of a fingerprint-based recognition system._
 
@@ -30,7 +30,7 @@ The types of Machine Learning Algorithms differ in their approach:
 1. Supervised Learning
 2. Unsupervised Learning
 
-![](RackMultipart20200807-4-1ccueq1_html_c7326819942a02b5.jpg)
+![](images/2.jpg)
 
 _Fig. 1.2 Categories of Machine Learning_
 
@@ -55,7 +55,7 @@ In the standard approach to programming, we tell the computer what to do, breaki
 
 Neural networks and deep learning presently provide the finest solutions to many problems in image recognition, speech recognition, and natural language processing.
 
-![](RackMultipart20200807-4-1ccueq1_html_f33a86ab1cb415b6.jpg)
+![](images/3.jpg)
 
 _Fig. 1.3 Venn diagram representing the relationship among AI, ML, DL._
 
@@ -63,7 +63,7 @@ There are mainly two kinds of neural networks:
 
 1. Convolutional Neural Network (CNN): Suitable for image recognition. 2. Long Short Term Memory Network: Suitable for speech recognition.
 
-![](RackMultipart20200807-4-1ccueq1_html_d0c764d26e002e85.jpg)
+![](images/4.jpg)
 
 _Fig. 1.4 Working of a CNN model_
 
@@ -169,7 +169,7 @@ model.fit\_generator(generator=train\_set,validation\_data=test\_set,steps\_per\
 
 **Output:**
 
-![](RackMultipart20200807-4-1ccueq1_html_79408f6e5e5eb1c9.jpg)
+![](images/5.jpg)
 
 ## 3.Result
 
