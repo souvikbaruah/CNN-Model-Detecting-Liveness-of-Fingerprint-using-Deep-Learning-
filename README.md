@@ -7,13 +7,13 @@ This project is to design the Convolutional Neural Network (CNN) to detect Fake 
 
 ## 1.Introduction
 
-**1.1**** Why fingerprint?**
+**1.1 Why fingerprint?**
 
 Fingerprints are one of the most widely used form of biometric identification, which leads other biometric identification methods like facial recognition, voice recognition, etc. The use of fingerprints as identifiers is perhaps one of the oldest and most familiar methods of identification.
 
 Fingerprints are used as identifiers because their patterns remain fixed over time and are less liable to wearing and age. This stands in sharp contrast to other modes of identification such as faces and voice recognition, the latter being so malleable it can be changed temporarily even by illness.
 
-**1.2**** How is Fingerprint Identification done?**
+**1.2 How is Fingerprint Identification done?**
 
 A fingerprint is acquired by a live-scan device which captures a digital image of the fingerprint. Most devices sample the image at 500 DPI (Dots per Inch) and produce an 8-bit gray-scale raw image. Some such devices also include mechanisms to distinguish between a fake and a live fingerprint to reveal spoofing attacks by fake fingerprints. The acquired raw image is then passed to a quality control module which checks whether the sample is good enough to be processed or not. If the quality is low then the system rejects the sample, otherwise it is passed to an image enhancement module whose main goal is to improve the clarity of the ridge pattern, especially in the noisy region and to simplify the subsequent feature extraction. The feature extraction module draws out a set of data (features) from the enhanced image. This feature set often includes minutiae points but, depending on the matching algorithm, other features (e.g., local orientation, local frequency, singularities, ridge shapes, ridge counts, parts of the improved image, etc.) may be extracted in conjunction with small details. Finally, the fingerprint matching module retrieves from a system database one or more templates and matches it with the features extracted from the current sample. If the system is operating in the verification mode where the user is required to claim his/her identity, only one template is retrieved from the database and matched with the current sample. On the other hand, if the system is operating in the identification mode where the identity of an individual is to be determined, the current sample is matched against all the database templates to check if one of them is sufficiently similar.
 
@@ -34,11 +34,7 @@ The types of Machine Learning Algorithms differ in their approach:
 
 _Fig. 1.2 Categories of Machine Learning_
 
-**1.3.1) Supervised Learning:** Machine Learning can be considered as a basic human nature. We learn from examples. In a supervised learning procedure, some labelled data are fed to the computer as examples. These input data are called training data. Each training example has a few inputs and a desired output.
-
-Through iterative optimization of an objective function, a supervised learning algorithm learns
-
-a function that can be used to predict the output associated with a new input which is not a part of the training data. It has two types:
+**1.3.1) Supervised Learning:** Machine Learning can be considered as a basic human nature. We learn from examples. In a supervised learning procedure, some labelled data are fed to the computer as examples. These input data are called training data. Each training example has a few inputs and a desired output.Through iterative optimization of an objective function, a supervised learning algorithm learns a function that can be used to predict the output associated with a new input which is not a part of the training data. It has two types:
 
 **1.3.1.A) Regression:** A regression model is when the output is a continuous value, such as salary or weight. Many alternative models may be used, but the simplest is the statistical regression. It tries to suit data with the simplest hyper-plane which fits through the points. In simple language, the algorithm sets up a mathematical relation between the training data and the desired output. Then it predicts the output from a new input.
 
@@ -51,9 +47,7 @@ a function that can be used to predict the output associated with a new input wh
 
 **1.4) What are Neural Networks?**
 
-In the standard approach to programming, we tell the computer what to do, breaking big problems into many precise tasks that a computer can easily perform. Whereas, in a neural network, we do not tell the computer how to solve problems. Instead, it learns from observational data, figuring out its own solution to the problem at hand. Deep learning is a wellbuilt set of techniques for learning in neural networks.
-
-Neural networks and deep learning presently provide the finest solutions to many problems in image recognition, speech recognition, and natural language processing.
+In the standard approach to programming, we tell the computer what to do, breaking big problems into many precise tasks that a computer can easily perform. Whereas, in a neural network, we do not tell the computer how to solve problems. Instead, it learns from observational data, figuring out its own solution to the problem at hand. Deep learning is a wellbuilt set of techniques for learning in neural networks.Neural networks and deep learning presently provide the finest solutions to many problems in image recognition, speech recognition, and natural language processing.
 
 ![](images/3.jpg)
 
@@ -61,7 +55,8 @@ _Fig. 1.3 Venn diagram representing the relationship among AI, ML, DL._
 
 There are mainly two kinds of neural networks:
 
-1. Convolutional Neural Network (CNN): Suitable for image recognition. 2. Long Short Term Memory Network: Suitable for speech recognition.
+1. Convolutional Neural Network (CNN): Suitable for image recognition. 
+2. Long Short Term Memory Network: Suitable for speech recognition.
 
 ![](images/4.jpg)
 
